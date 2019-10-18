@@ -201,3 +201,14 @@
 
 .act{
     background: rgb(158, 0, 136);
+}
+
+div::-webkit-scrollbar {
+        background: #fff;
+        width: 10px;
+        height: 15px; 
+    }
+
+    div::-webkit-scrollbar-thumb {
+        background: rgb(255,197,0);
+    }

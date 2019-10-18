@@ -298,18 +298,24 @@ function animate(){
   for (var i = 0; i < planets.length; i++){
     Circle(planets[i].x,planets[i].y,planets[i].radius,planets[i].fillColor);
   }
+  c.font = "bold italic 60px Cambria Math";
+  c.textAlign = "center";
   var ring3 = new Circle(center.x,center.y, 245,'rgba(10, 23, 66, 0.5)');
   var ring2 = new Circle(center.x,center.y, 215,'rgba(9, 30, 75, 0.5)');
   var ring1 = new Circle(center.x,center.y, 175,'rgba(8, 34, 83, 0.5)');
-  var earthBorder = new Circle(center.x,center.y, 135,'rgb(12, 20, 56)');
-  var earth = new Circle(center.x,center.y, earthWidth,'rgb(25, 118, 181)');
+  var earthBorder = new Circle(center.x,center.y, 135,'rgb(12, 20, 56, 0.5)');
+  var earth = new Circle(center.x,center.y, earthWidth,'rgb(25, 118, 181, 0.5)');
   for (var i = 1; i < land.length; i++){
     land[i].update();
   }
   for (var i = 1; i < clouds.length; i++){
     clouds[i].update();
   }
+  
+  c.fillText("ax²+bx+c=0", canvas.width/6, canvas.height/2); 
+  c.fillText("ax²+2ax+a²=0", canvas.width/1.20, canvas.height/2); 
   var semi = new SemiCircle(center.x,center.y,earthWidth,'rgba(0, 0, 0, 0.4)');
+  
 }
 
 animate();

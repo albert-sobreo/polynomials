@@ -212,3 +212,10 @@ div::-webkit-scrollbar {
     div::-webkit-scrollbar-thumb {
         background: rgb(255,197,0);
     }
+
+.math-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+li{
+    margin-top: 40px;
+}

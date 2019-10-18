@@ -5,7 +5,7 @@
     justify-content: center;
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
-    color: white
+    color: white;
 }
 
 .card-selector-nofade{
@@ -218,4 +218,34 @@ div::-webkit-scrollbar {
 }
 li{
     margin-top: 40px;
+}
+
+@keyframes jumpin{
+    0%{
+        opacity: 0;
+        transform: translate(0px, 100px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0)
+    }
+}
+
+@keyframes guidefade{
+    0%{
+        opacity: 0;
+        transform: translate(0px, 100px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,0)
+    }
+}
+
+.guide-fade{
+    animation: 1s ease guidefade;
+}
+
+.boi{
+    animation: 1s ease  jumpin;
 }

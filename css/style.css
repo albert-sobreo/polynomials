@@ -386,3 +386,33 @@ li{
     background-size: cover;
     background-position: center;
 }
+
+.eloy{
+    background: url("../img/eloy.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.jhex{
+    background: url("../img/jhex.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.nor{
+    background: url("../img/nor.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cel{
+    background: url("../img/cel.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.venus{
+    background: url("../img/venus.jpg");
+    background-size: cover;
+    background-position: center;
+}

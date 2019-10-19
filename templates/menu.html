@@ -14,6 +14,24 @@
     </style>
 </head>
 <body style="background: url(../img/menu-bg-copy.png); background-repeat: no-repeat; background-size: cover;margin:30px 50px 30px;background-color: rgb(9,16,19) ;font-family: Arial, Helvetica, sans-serif">
+    <div style="float: right; margin-top: -10px; margin-left: 1250px;position: fixed;">
+        <!-- <input type="image" src="../img/minbtn.png" width="20px" style="margin-right: 5px">
+        <input type="image" src="../img/xbtn.png" height="20px"> -->
+        <img src="../img/minbtn.png" alt="" height="20px" onclick="location.href='#'" style="margin-right: 5px; cursor: pointer" id="min-btn">
+        <img src="../img/xbtn.png" alt="" height="20px" onclick="location.href='#'" style="cursor: pointer" id="close-btn">
+        <script>
+            const remote = require('electron').remote;
+            document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize(); 
+            });
+            
+            document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+            }); 
+        </script>
+    </div>
     <div class="container-fluid boi">
         <div class="row">
             <div class="col-4">
@@ -34,12 +52,13 @@
                 <div class="card-selector reference-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='referencecard.html'"><span class="reference-card-helper"></span><p>Reference Card</p></div>
             </div>
             <div class="col-4">
-                <div class="card-selector credit-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='#'"><span class="credit-card-helper"></span><p>Credits</p></div>
+                <div class="card-selector credit-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='credit.html'"><span class="credit-card-helper"></span><p>Credits</p></div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script type="text/javascript" src="../vendor/bootstrap.js"></script>
     <script src="../assets/js/jquery.smoothState.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -7,10 +7,98 @@
         <title>Document</title>
         <link rel="stylesheet" href="../vendor/bootstrap.css">
         <link rel="stylesheet" href="../css/style.css">
+        <style type="text/css">
+            ::-webkit-scrollbar { 
+            display: none; 
+            }
+        </style>
 </head>
-<body>
+<body style="background: url(../img/guidebg.png); background-repeat: no-repeat; background-size: cover;margin:30px 50px 30px;background-color: rgb(9,16,19) ;font-family: Arial, Helvetica, sans-serif">
+    <div style="float: right; margin-top: -10px; margin-left: 1250px;position: fixed;">
+        <!-- <input type="image" src="../img/minbtn.png" width="20px" style="margin-right: 5px">
+        <input type="image" src="../img/xbtn.png" height="20px"> -->
+        <img src="../img/minbtn.png" alt="" height="20px" style="margin-right: 5px; cursor: pointer" id="min-btn">
+        <img src="../img/xbtn.png" alt="" height="20px" style="cursor: pointer" id="close-btn">
+        <script>
+            const remote = require('electron').remote;
+            document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize(); 
+            });
+            
+            document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+            }); 
+        </script>
+    </div>
+    <div class="container-fluid guide-fade" style="padding-left: 200px; padding-right: 200px">
+        <div class="row">
+            <div class="col text-center">
+                <img src="../img/1.png" height="100px" width="auto">
+                <img src="../img/2.png" height="100px" width="auto">
+                <img src="../img/3.png" height="100px" width="auto">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <h3 style="color: rgb(255,197,0); font-weight: bolder; margin-top: 10px">Prepared by</h3>
+                <h1 style="color:rgb(201, 210, 214); font-weight: bolder">Marvin B. Ramos</h1>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-3"></div>
+            <div class="col-6 text-center">
+                <h3 style="color: rgb(255,197,0); font-weight: bolder; margin-top: 10px">Lead Developer</h3>
+                <div class="card-image-big me"></div>
+                <h1 style="color:rgb(201, 210, 214); font-weight: bolder">Jan Albert Sobreo</h1>
+            </div>
+            <div class="col-3"></div>
+
+        </div>
+        <div class="row" style="margin: 30px 0 0">
+            <div class="col text-center"><h3 style="color: rgb(255,197,0); font-weight: bolder;">Other Developers</h3></div>
+        </div>
+        <div class="row">
+            <div class="col-3 text-center">
+                <div class="card-image-small"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">Aldrin Morada</h6>
+            </div>
+            <div class="col-3 text-center">
+                <div class="card-image-small"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">Maria Venus Vicente</h6>
+            </div>
+            <div class="col-3 text-center">
+                <div class="card-image-small mig"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">Migues Reyes</h6>
+            </div>
+            <div class="col-3 text-center">
+                <div class="card-image-small"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">Louie Salamate</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 text-center">
+                <div class="lower-card-image-small"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">Norberto Lising Jr.</h6>
+            </div>
+            <div class="col-4 text-center">
+                <div class="lower-card-image-small"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">John Jexter De Jesus</h6>
+            </div>
+            <div class="col-4 text-center">
+                <div class="lower-card-image-small"></div>
+                <h6 style="color:rgb(201, 210, 214); font-weight: bolder">Celine Javier</h6>
+            </div>
+        </div>
+        <div class="row" style="margin: 20px 0 0">
+            <div class="col-12 text-center"><button class="btn" style="padding:15px;background-color:rgb(255,197,0); border-radius: 60px" onclick="location.href='menu.html'"><img src="../img/back.png" height="30px"></button></div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script type="text/javascript" src="../vendor/bootstrap.js"></script>
     <script src="../assets/js/jquery.smoothState.min.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

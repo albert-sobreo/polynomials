@@ -12,6 +12,7 @@ function createWindow () {
     height: 743,
     backgroundColor: '#002b36',
     frame: false,
+    icon: __dirname + '/img/icon.ico',
     webPreferences: {
       nodeIntegration: true
   }})

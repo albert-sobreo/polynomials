@@ -7,6 +7,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="vendor/bootstrap.css">
     <link rel="stylesheet" href="css/kurzgesagt.scss">
+    <script>
+        var images = [];
+        function preload() {
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+
+        //-- usage --//
+        preload(
+            "img/1.png",
+            "img/1dot.png",
+            "img/2.png",
+            "img/2dot.png",
+            "img/3.png",
+            "img/3dot.png",
+            "img/act1.jpg",
+            "img/act2.png",
+            "img/act3.jpg",
+            "img/activitycard-copy.png",
+            "img/activitycard.png",
+            "img/back.png",
+            "img/cel.jpg",
+            "img/earth.png",
+            "img/eloy.jpg",
+            "img/guide1.jpg",
+            "img/guidebg.png",
+            "img/jhex.jpg",
+            "img/math1.jpg",
+            "img/math2.jpg",
+            "img/math3.png",
+            "img/me.jpg",
+            "img/menu-bg-copy.png",
+            "img/mig.jpg",
+            "img/minbtn.png",
+            "img/nor.jpg",
+            "img/people.jpg",
+            "img/people.png",
+            "img/venus.jpg",
+            "img/xbtn.png",
+        )
+    </script>
     <style type="text/css">
         ::-webkit-scrollbar { 
         display: none; 

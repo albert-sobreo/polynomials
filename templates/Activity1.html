@@ -33,6 +33,17 @@
         </script>
     </div>
 	<div class="container-fluid">
+		<div style="position: fixed; top:75px; right:50px; height: 100px; width: 80px; background: rgb(44, 126, 182); border-radius: 10px; ">
+			<div class="row">
+				<div class="col text-center"><h4 style="font-weight: bolder; color: white" id="score">-</h4></div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><hr></div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><h4 style="font-weight: bolder; color: white">5</h4></div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col text-center" style="margin-bottom: 100px;">
 				<h1 style="color: rgb(255,197,0); font-weight: bolder; font-size: 50px">Activity 1</h1>
@@ -41,95 +52,120 @@
 		<div class="row">
 			<div class="carousel slide col" data-ride="carousel" id="demo" data-interval="false" data-wrap="false" style="height: 425px;">
 				<div class="carousel-inner text-center" style="color:rgb(239, 230, 255); font-size:1.7em;">
-					<div class="carousel-item active" style="margin-top: 125px;">
-						<h1 class="equation"> x<sup>2</sup> - 10x + <input type="text" class="form-control" style="width:150px; display:inline; font-size:1em;"></h1 class="equation"><!-- start of 1 --><!-- change underline to text input -->
-							<div class="spacing" style="display: none;">
-								solution: <br>
-								<div>
-									  <b>A.</b> find the value of a <br>
-									   \(a={10\over2}\) <!-- change the format of division later --> <br>
-									   a = 5 <br>
-									   where a is from x\(^2\) + 2ax + a\(^2\) <br>
+					<div class="carousel-item active">
+						<div style="display:inherit;" id="given0">
+							<h1 class="equation"> x<sup>2</sup> - 10x + <input id="input0" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1>
+								<div class="spacing" style="display: none;">
+									solution: <br>
+									<div>
+										  <b>A.</b> find the value of a <br>
+										   \(a={10\over2}\)<br>
+										   a = 5 <br>
+										   where a is from x\(^2\) + 2ax + a\(^2\) <br>
+									</div>
+								
+									<div>
+										  <b>B.</b> solve for a\(^2\) <br>
+										   a\(^2\) = 5\(^2\)<br>
+										   <b>a\(^2\) = 25</b>
+									</div>
 								</div>
-							
-								<div>
-									  <b>B.</b> solve for a\(^2\) <br>
-									   a\(^2\) = 5\(^2\)<br>
-									   <b>a\(^2\) = 25</b>
-								</div>
-							</div><!-- end of 1 -->
+						</div>
+						<div id="solution0" style="display: none;">
+							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+						</div>
 					</div>
-					<div class="carousel-item" style="margin-top: 125px;">
-						<h1 class="equation">n<sup>2</sup> + 6n + <input type="text" class="form-control" style="width:150px; display:inline; font-size:1em;"></h1 class="equation"><!-- start of 2 --><!-- change underline to text input -->
-							<div class="spacing" style="display: none;">
-								 solution: <br>
-								<div>
-									  <b>A.</b> find the value of a <br>
-									   \(a={6\over2}\) <br>
-									   a = 3 <br>
-								</div>
-							
-								<div>
-									  <b>B.</b> solve for a\(^2\) <br>
-									   a\(^2\) = 3\(^2\)<br>
-									   <b>a\(^2\) = 9</b>
-								</div>
-							</div><!-- end of 2 -->
+					<div class="carousel-item">
+						<div style="display: inherit;" id="given1">
+							<h1 class="equation">n<sup>2</sup> + 6n + <input id="input1" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1><!-- start of 2 --><!-- change underline to text input -->
+								<div class="spacing" style="display: none;">
+									 solution: <br>
+									<div>
+										  <b>A.</b> find the value of a <br>
+										   \(a={6\over2}\) <br>
+										   a = 3 <br>
+									</div>
+								
+									<div>
+										  <b>B.</b> solve for a\(^2\) <br>
+										   a\(^2\) = 3\(^2\)<br>
+										   <b>a\(^2\) = 9</b>
+									</div>
+								</div><!-- end of 2 -->
+						</div>
+						<div id="solution1" style="display: none;">
+							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+						</div>
 					</div>
-					<div class="carousel-item" style="margin-top: 125px;">
-						<h1 class="equation">q<sup>2</sup> - 12q + <input type="text" class="form-control" style="width:150px; display:inline; font-size:1em;"></li></h1 class="equation"><!-- start of 3 --><!-- change underline to text input -->
-							<div class="spacing" style="display: none;">
-								 solution: <br>
-								<div>
-									  <b>A.</b> find the value of a <br>
-									   \(a=-{12\over2}\) <br>
-									   a = -6 <br>
-								</div>
-							
-								<div>
-									  <b>B.</b> solve for a\(^2\) <br>
-									   a\(^2\) = (-6)\(^2\)<br>
-									   <b>a\(^2\) = 36</b>
-								</div>
-							</div><!-- end of 3 -->
+					<div class="carousel-item">
+						<div style="display: inherit;" id="given2"> 
+							<h1 class="equation">q<sup>2</sup> - 12q + <input id="input2" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></li></h1><!-- start of 3 --><!-- change underline to text input -->
+								<div class="spacing" style="display: none;">
+									 solution: <br>
+									<div>
+										  <b>A.</b> find the value of a <br>
+										   \(a=-{12\over2}\) <br>
+										   a = -6 <br>
+									</div>
+								
+									<div>
+										  <b>B.</b> solve for a\(^2\) <br>
+										   a\(^2\) = (-6)\(^2\)<br>
+										   <b>a\(^2\) = 36</b>
+									</div>
+								</div><!-- end of 3 -->
+						</div>
+						<div id="solution2" style="display: none;">
+							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+						</div>
 					</div>
-					<div class="carousel-item" style="margin-top: 125px">
-						<h1 class="equation">y<sup>2</sup> + 7y + <input type="text" class="form-control" style="width:150px; display:inline; font-size:1em;"></h1 class="equation"><!-- start of 4 --><!-- change underline to text input -->
-							<div class="spacing" style="display: none;">
-								 solution: <br>
-								<div>
-									  <b>A.</b> find the value of a <br>
-									   \(a={7\over2}\) <br>
-								</div>
-							
-								<div>
-									  <b>B.</b> solve for a\(^2\) <br>
-									   \(a^2=({7\over2})^2\)<br>
-									   <b> \(a^2 ={49\over4}\) </b>
-								</div>
-							</div><!-- end of 4 -->
+					<div class="carousel-item">
+						<div style="display: inherit;" id="given3">
+							<h1 class="equation">y<sup>2</sup> + 7y + <input id="input3" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1><!-- start of 4 --><!-- change underline to text input -->
+								<div class="spacing" style="display: none;">
+									 solution: <br>
+									<div>
+										  <b>A.</b> find the value of a <br>
+										   \(a={7\over2}\) <br>
+									</div>
+								
+									<div>
+										  <b>B.</b> solve for a\(^2\) <br>
+										   \(a^2=({7\over2})^2\)<br>
+										   <b> \(a^2 ={49\over4}\) </b>
+									</div>
+								</div><!-- end of 4 -->
+						</div>
+						<div id="solution3" style="display: none;">
+							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+						</div>
 					</div>	
-					<div class="carousel-item" style="margin-top: 125px">
-						<h1 class="equation">m<sup>2</sup> + 30m + <input type="text" class="form-control" style="width:150px; display:inline; font-size:1em;"></h1 class="equation"><!-- start of 5 --><!-- change underline to text input -->
-						<div class="spacing" style="display: none;">
-							 solution: <br>
-							<div>
-								  <b>A.</b> find the value of a <br>
-								   \(a={30\over2}\) <br>
-								   a = 15 <br>
-							</div>
-						
-							<div>
-								  <b>B.</b> solve for a\(^2\) <br>
-								   a\(^2\) = 15\(^2\)<br>
-								   <b>a\(^2\) = 225</b>
-							</div>
-						</div><!-- end of 5 -->
+					<div class="carousel-item">
+						<div style="display: inherit;" id="given4">
+							<h1 class="equation">m<sup>2</sup> + 30m + <input id="input4" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1><!-- start of 5 --><!-- change underline to text input -->
+							<div class="spacing" style="display: none;">
+								 solution: <br>
+								<div>
+									  <b>A.</b> find the value of a <br>
+									   \(a={30\over2}\) <br>
+									   a = 15 <br>
+								</div>
+							
+								<div>
+									  <b>B.</b> solve for a\(^2\) <br>
+									   a\(^2\) = 15\(^2\)<br>
+									   <b>a\(^2\) = 225</b>
+								</div>
+							</div><!-- end of 5 -->
+						</div>
+						<div id="solution4" style="display: none;">
+							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+						</div>
 					</div>
-					<a class="carousel-control-prev" href="#demo" data-slide="prev" style="margin-top: 125px;">
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
 						<span class="carousel-control-prev-icon"></span>
 					</a>
-					<a class="carousel-control-next" href="#demo" data-slide="next" style="margin-top: 125px;">
+					<a class="carousel-control-next" href="#demo" data-slide="next">
 						<span class="carousel-control-next-icon"></span>
 					</a>
 				</div>
@@ -140,9 +176,9 @@
 		</div>
 		<div class="row">
 			<div class="col-12 text-center">
-				<button class="btn btn-lg">Check Answers</button>
+				<button id="checkAnswers" class="btn btn-lg btn-success" style="border-radius: 10px;" onclick="checkAnswers()">Check Answers</button>
 				&nbsp
-				<button class="btn btn-lg">Show Solutions</button>
+				<button id="showSolutions" class="btn btn-lg btn-warning" style="border-radius: 10px;" disabled="true" onclick="showSolutions()">Show Solutions</button>
 			</div>
 		</div>
 	</div class="container">
@@ -151,5 +187,43 @@
     <script src="../assets/js/jquery.smoothState.min.js"></script>
     <script src="../assets/js/main.js"></script>
 	<script src="../js/mathjax.js"></script>
+
+	<script>
+		function checkAnswers(){
+			var score = 0
+			answers = []
+			correct = ['25', '9', '36', '49/4', '225']
+			answers.push(document.getElementById('input0').value)
+			answers.push(document.getElementById('input1').value)
+			answers.push(document.getElementById('input2').value)
+			answers.push(document.getElementById('input3').value)
+			answers.push(document.getElementById('input4').value)
+			
+			for (var i = 0; i < 5; i++){
+				if(answers[0] == correct[0]){
+					document.getElementById('input'+i).style.background = 'rgb(126, 241, 136)'
+					score++;
+				}
+				else{
+					document.getElementById('input'+i).style.background = 'rgb(255, 163, 163)'
+				}
+			}
+
+			document.getElementById('score').innerHTML = score;
+			$("input").addClass("disablecontent")
+
+			document.getElementById('checkAnswers').disabled = true
+			document.getElementById('showSolutions').disabled = false
+
+		}
+
+		function showSolutions(){
+			for(var i = 0; i < 5; i++){
+				document.getElementById('given'+i).style.display = 'none'
+				document.getElementById('solution'+i).style.display = 'inherit'
+			}
+		}
+	</script>
+
 </body>
 </html>

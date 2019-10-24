@@ -38,7 +38,10 @@
         </script>
     </div>
 	<div class="container-fluid">
-		<div style="position: fixed; top:75px; right:50px; height: 100px; width: 80px; background: rgb(44, 126, 182); border-radius: 10px; ">
+		<div style="position: fixed; top:75px; right:54px;">
+			<h5 style="font-weight: bolder; color: white">SCORE</h5>
+		</div>
+		<div style="position: fixed; top:100px; right:50px; height: 100px; width: 80px; background: rgb(44, 126, 182); border-radius: 10px; ">
 			<div class="row">
 				<div class="col text-center"><h4 style="font-weight: bolder; color: white" id="score">-</h4></div>
 			</div>
@@ -60,111 +63,85 @@
 					<div class="carousel-item active">
 						<div style="display:inherit;" id="given0">
 							<h1 class="equation"> x<sup>2</sup> - 10x + <input id="input0" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1>
-								<div class="spacing" style="display: none;">
-									solution: <br>
-									<div>
-										  <b>A.</b> find the value of a <br>
-										   \(a={10\over2}\)<br>
-										   a = 5 <br>
-										   where a is from x\(^2\) + 2ax + a\(^2\) <br>
-									</div>
-								
-									<div>
-										  <b>B.</b> solve for a\(^2\) <br>
-										   a\(^2\) = 5\(^2\)<br>
-										   <b>a\(^2\) = 25</b>
-									</div>
-								</div>
 						</div>
 						<div id="solution0" style="display: none;">
-							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+							<div style="margin: 0 300px 0; background: rgb(56, 85, 97); border-radius: 20px; height: 400px">
+									<b style="color: rgb(255,197,0)">1.) x<sup>2</sup> - 10x + ____ </b><br>
+									<b>a. find the value of a </b> <br>
+									\(a={10\over2}\)<br>
+									\(a=5\) <br>
+									where a is from \(x^2+2ax+a^2\) <br>
+
+									<b>b. solve for a<sup>2</sup></b> <br>
+									\(a^2\) = \(5^2\)<br>
+									<b>\(a^2 = 25\)</b>
+							</div>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<div style="display: inherit;" id="given1">
 							<h1 class="equation">n<sup>2</sup> + 6n + <input id="input1" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1><!-- start of 2 --><!-- change underline to text input -->
-								<div class="spacing" style="display: none;">
-									 solution: <br>
-									<div>
-										  <b>A.</b> find the value of a <br>
-										   \(a={6\over2}\) <br>
-										   a = 3 <br>
-									</div>
-								
-									<div>
-										  <b>B.</b> solve for a\(^2\) <br>
-										   a\(^2\) = 3\(^2\)<br>
-										   <b>a\(^2\) = 9</b>
-									</div>
-								</div><!-- end of 2 -->
 						</div>
 						<div id="solution1" style="display: none;">
-							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+							<div style="margin: 0 300px 0; background: rgb(56, 85, 97); border-radius: 20px; height: 400px">
+									<b style="color: rgb(255, 197, 0)">2.) n<sup>2</sup> + 6n + ____</b><br>
+									<b>a. find the value of a</b><br>
+									\(a={6\over2}\) <br>
+									\(a=3\) <br>
+									<b>b. solve for \(a^2\)</b> <br>
+									\(a^2=3^2\)<br>
+									<b>\(a^2 = 9\)</b>
+							</div>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<div style="display: inherit;" id="given2"> 
 							<h1 class="equation">q<sup>2</sup> - 12q + <input id="input2" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></li></h1><!-- start of 3 --><!-- change underline to text input -->
-								<div class="spacing" style="display: none;">
-									 solution: <br>
-									<div>
-										  <b>A.</b> find the value of a <br>
-										   \(a=-{12\over2}\) <br>
-										   a = -6 <br>
-									</div>
-								
-									<div>
-										  <b>B.</b> solve for a\(^2\) <br>
-										   a\(^2\) = (-6)\(^2\)<br>
-										   <b>a\(^2\) = 36</b>
-									</div>
-								</div><!-- end of 3 -->
 						</div>
 						<div id="solution2" style="display: none;">
-							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+							<div style="margin: 0 300px 0; background: rgb(56, 85, 97); border-radius: 20px; height: 400px">
+								<b style="color:rgb(255,197,0)">3.) q<sup>2</sup> - 12q + ____</b><br>
+								<b>a. find the value of a </b><br>
+								\(a=-{12\over2}\) <br>
+								\(a=-6\) <br>
+
+								<b>b. solve for \(a^2\) </b> <br>
+								\(a^2=(-6)^2\)<br>
+								<b>\(a^2=36\)</b>
+							</div>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<div style="display: inherit;" id="given3">
 							<h1 class="equation">y<sup>2</sup> + 7y + <input id="input3" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1><!-- start of 4 --><!-- change underline to text input -->
-								<div class="spacing" style="display: none;">
-									 solution: <br>
-									<div>
-										  <b>A.</b> find the value of a <br>
-										   \(a={7\over2}\) <br>
-									</div>
-								
-									<div>
-										  <b>B.</b> solve for a\(^2\) <br>
-										   \(a^2=({7\over2})^2\)<br>
-										   <b> \(a^2 ={49\over4}\) </b>
-									</div>
-								</div><!-- end of 4 -->
 						</div>
 						<div id="solution3" style="display: none;">
-							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+							<div style="margin: 0 300px 0; background: rgb(56, 85, 97); border-radius: 20px; height: 400px">
+								<b style="color: rgb(255, 197, 0)">4.) y<sup>2</sup> + 7y + ____</b><br>
+								<b>a. find the value of a </b><br>
+								\(a={7\over2}\) <br>
+
+								<b>b. solve for \(a^2\) </b><br>
+								\(a^2=({7\over2})^2\)<br>
+								<b> \(a^2 ={49\over4}\) </b>
+							</div>
 						</div>
 					</div>	
 					<div class="carousel-item">
 						<div style="display: inherit;" id="given4">
 							<h1 class="equation">m<sup>2</sup> + 30m + <input id="input4" type="text" class="form-control text-center" style="width:150px; display:inline; font-size:1em;"></h1><!-- start of 5 --><!-- change underline to text input -->
-							<div class="spacing" style="display: none;">
-								 solution: <br>
-								<div>
-									  <b>A.</b> find the value of a <br>
-									   \(a={30\over2}\) <br>
-									   a = 15 <br>
-								</div>
-							
-								<div>
-									  <b>B.</b> solve for a\(^2\) <br>
-									   a\(^2\) = 15\(^2\)<br>
-									   <b>a\(^2\) = 225</b>
-								</div>
-							</div><!-- end of 5 -->
 						</div>
 						<div id="solution4" style="display: none;">
-							<div style="margin: 0 300px 0; background: black; border-radius: 20px; height: 400px">fasdfasdf</div>
+							<div style="margin: 0 300px 0; background: rgb(56, 85, 97); border-radius: 20px; height: 400px">
+								<b style="color: rgb(255, 197, 0)">5.) m<sup>2</sup> + 30m + ____</b><br>
+								<b>a. find the value of a</b> <br>
+								\(a={30\over2}\) <br>
+								\(a=15\) <br>
+
+								<b>b. solve for a\(^2\)</b> <br>
+								\(a^2=15^2\)<br>
+								<b>\(a^2=225\)</b>
+							</div>
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -181,9 +158,9 @@
 		</div>
 		<div class="row">
 			<div class="col-12 text-center">
-				<button id="checkAnswers" class="btn btn-lg btn-success" style="border-radius: 10px;" onclick="checkAnswers()">Check Answers</button>
+				<button id="checkAnswers" class="btn btn-lg btn-success" style="border-radius: 10px;" onclick="checkAnswers()">Submit Answers</button>
 				&nbsp
-				<button id="showSolutions" class="btn btn-lg btn-warning" style="border-radius: 10px;" disabled="true" onclick="showSolutions()">Show Solutions</button>
+				<button id="showSolutions" class="btn btn-lg btn-warning" style="border-radius: 10px; background: rgb(255, 193, 7)" disabled="true" onclick="showSolutions()">Show Solutions</button>
 			</div>
 		</div>
 	</div class="container">
@@ -195,6 +172,10 @@
 
 	<script>
 		function checkAnswers(){
+			var r = confirm("Are you sure you want to submit all answers?")
+			if(!r){
+				return
+			}
 			var score = 0
 			answers = []
 			correct = ['25', '9', '36', '49/4', '225']
@@ -227,12 +208,16 @@
 				for(var i = 0; i < 5; i++){
 					document.getElementById('given'+i).style.display = 'inherit'
 					document.getElementById('solution'+i).style.display = 'none'
+					document.getElementById('showSolutions').innerHTML = "Show Solutions"
+					document.getElementById('showSolutions').style.background = "rgb(255, 193, 7)"
 				}
 			}
 			else{
 				for(var i = 0; i < 5; i++){
 					document.getElementById('given'+i).style.display = 'none'
 					document.getElementById('solution'+i).style.display = 'inherit'
+					document.getElementById('showSolutions').innerHTML = "Go Back"
+					document.getElementById('showSolutions').style.background = "rgb(255, 65, 7)"
 				}
 			}
 		}

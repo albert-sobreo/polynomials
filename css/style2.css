@@ -1,0 +1,31 @@
+.equation{
+	font-weight: bold;
+}
+
+.up{
+	position: relative;
+	bottom: 1ex;
+	font-size: 100%;
+	text-decoration: underline;
+}
+
+.down{
+	position: relative;
+	top: 1ex;
+	right: 1ex;
+	font-size: 100%;
+	padding: 0;
+}
+
+.spacing{
+	line-height: 1.6em;
+}
+
+b{
+	font: normal 100px;
+
+}
+
+.squareroot{
+	text-decoration: overline;
+}

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script> 
+		window.nodeRequire = require; 
+		delete window.require;
+		delete window.exports; delete window.module; 
+	</script> 
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -200,7 +205,7 @@
 			answers.push(document.getElementById('input4').value)
 			
 			for (var i = 0; i < 5; i++){
-				if(answers[0] == correct[0]){
+				if(answers[i] == correct[i]){
 					document.getElementById('input'+i).style.background = 'rgb(126, 241, 136)'
 					score++;
 				}
@@ -218,9 +223,17 @@
 		}
 
 		function showSolutions(){
-			for(var i = 0; i < 5; i++){
-				document.getElementById('given'+i).style.display = 'none'
-				document.getElementById('solution'+i).style.display = 'inherit'
+			if(document.getElementById('given0').style.display === "none"){
+				for(var i = 0; i < 5; i++){
+					document.getElementById('given'+i).style.display = 'inherit'
+					document.getElementById('solution'+i).style.display = 'none'
+				}
+			}
+			else{
+				for(var i = 0; i < 5; i++){
+					document.getElementById('given'+i).style.display = 'none'
+					document.getElementById('solution'+i).style.display = 'inherit'
+				}
 			}
 		}
 	</script>

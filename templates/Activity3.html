@@ -152,8 +152,8 @@
 						<!-- GIVEN 2 -->
 						<div style="display:inherit;" id="given2">
 							<h1><b>5x<sup>2</sup> + 3x - 2 = 0</b></h1> <!-- start of number 3 -->
-							<h1>a<sub>1</sub> = <input type="text" id="input2-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
-							<h1>a<sub>2</sub> = <input type="text" id="input2-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>x<sub>1</sub> = <input type="text" id="input2-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>x<sub>2</sub> = <input type="text" id="input2-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
 						</div>
 						<div class="spacing" style="display: none;margin: 0 200px 0; background: rgb(56, 85, 97); border-radius: 20px; " id="solution2">
 							<div>
@@ -201,8 +201,8 @@
 						<!-- GIVEN 3 -->
 						<div style="display: inherit;" id="given3">
 							<h1><b>m<sup>2</sup> + 4m - 45 = 0</b></h1> <!-- start of number 4 -->
-							<h1>x<sub>1</sub> = <input type="text" id="input3-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
-							<h1>x<sub>2</sub> = <input type="text" id="input3-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>m<sub>1</sub> = <input type="text" id="input3-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>m<sub>2</sub> = <input type="text" id="input3-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
 						</div>
 						<div class="spacing" style="display: none;margin: 0 200px 0; background: rgb(56, 85, 97); border-radius: 20px; " id="solution3">
 							<div>
@@ -243,39 +243,40 @@
 						<!-- GIVEN 4 -->
 						<div style="display:inherit;" id="given4">
 							<h1><b>p<sup>2</sup> + 2p = 48</b></h1> <!-- start of number 5 -->
-							<h1>x<sub>1</sub> = <input type="text" id="input4-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
-							<h1>x<sub>2</sub> = <input type="text" id="input4-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>p<sub>1</sub> = <input type="text" id="input4-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>p<sub>2</sub> = <input type="text" id="input4-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
 						</div>
 						<div class="spacing" style="display: none;margin: 0 200px 0; background: rgb(56, 85, 97); border-radius: 20px; " id="solution4">
 							<div>
-								<b style="color: rgb(255,197,0);">5.) x<sup>p<sup>2</sup> + 2p = 48</b><br>
+								<b style="color: rgb(255,197,0);">5.)p<sup>2</sup> + 2p = 48</b><br>
 								<b>a. Add the square of one-half of the <br>
 								coefficient of x on both sides of the  <br>
 								equation.</b><br>
 								<!-- SOLUTION -->
-								\(a=2\)<br><!--editthispart-->
-								\(a^2=4\)<br>
+								\(a={2\over2}\) <br>
+								\(a=1\) <br>
+								\(a^2=1\) <br>
 							</div>
 							<div>
 								<b>b. therefore:</b><br>
 								<!-- SOLUTION -->
-								\(x^2+4x+4=49\)<br>
-								<span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><span>&#8730</span><span class="squareroot">(x+2)\(^2\)</span> =   <span>&#8730</span><span class="squareroot">49</span></span><br>
-								\(x+2=\pm7\)<br>
+								\(p^2+2p+1=48+1\) <br>
+								<span>&#8730</span><span class="squareroot">(p+1)\(^2\)</span> = <span>&#8730</span><span class="squareroot">49</span> <br>
+								\(p+1=\pm7\) <br>
 							</div>
 							<div>
 								<b>C. first solution:</b><br>
 								<!-- SOLUITON -->
-								\(x+2=7\)<br>
-								\(x=7-2\)<br>
-								<b>\(x=5\)</b><br>
+								\(p+1=7\) <br>
+								\(p=7-1\) <br>
+								\(p=6\) <br>
 							</div>
 							<div>
 								<b>D. second solution:</b><br>
 								<!-- SOLUTION -->
-								\(x-2=7\)<br>
-								\(x=7+2\)<br>
-								<b>\(x=9\)</b><br>
+								\(p+1=-7\) <br>
+								\(p=-7-1\) <br>
+								\(p=-8\) <br>
 							</div>
 						</div><!-- end of number 5 -->
 					</div>
@@ -312,11 +313,11 @@
 			var score = 0
 			// creates array
 			correct = [
-				['1', '-3'],
-				['6', '-2'],
-				['8', '-5'],
-				['1/2', '-3'],
-				['5', '-9']
+				['8', '-12'],
+				['8', '0'],
+				['2/5', '-1'],
+				['5', '-9'],
+				['6', '-8']
 			]
 
 			for(var i = 0; i < 5; i++){
@@ -336,11 +337,11 @@
 			for(var i = 0; i < 5; i++){
 				for(var j = 0; j < 2; j++){
 					if(correct[i][j] == answers[i][j]){
-						document.getElementById('input'+i+'-'+j).style.background = 'rgb(126,241, 136'
+						document.getElementById('input'+i+'-'+j).style.background = 'rgb(126,241, 136)'
 						score++
 					}
 					else{
-						document.getElementById('input'+i+'-'+j).style.background = 'rgb(255, 163, 163'
+						document.getElementById('input'+i+'-'+j).style.background = 'rgb(255, 163, 163)'
 					}
 				}
 			}

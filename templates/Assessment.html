@@ -1,112 +1,209 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ASSESSMENT</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/mathjax.js"></script>
+	<script> 
+		window.nodeRequire = require; 
+		delete window.require;
+		delete window.exports; delete window.module; 
+	</script> 
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../vendor/bootstrap.css">
+    <link rel="stylesheet" href="../css/style2.css">
+	<style type="text/css">
+		.spacing{
+			overflow-y: scroll;
+			height: 475px;
+		}
+		input{
+			vertical-align: text-bottom;
+			color: rgb(9,19,55) !important;
+			width: 50px !important;
+			display: inline !important; 
+			font-size: .5em !important;
+		}
+    </style>
 </head>
-<body>
-	<header>
-		<h1><b>ASSESSMENT</b></h1>
-	</header>
-	<section>
-		<ol>
-		<h3><li><b>) x\(^2\) - 14x = 32 </b></li></h3> <!-- start of number 1 -->
-		<div class="spacing">
-				&nbsp steps: <br>
-				<div>
-					&nbsp &nbsp <b>A.</b>  <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp a = - 7 <br> 
-					&nbsp &nbsp &nbsp &nbsp &nbsp a\(^2\)  = 49<br>
-				</div>
+<body style="background: url(../img/guidebg.png); background-repeat: no-repeat; background-size: 150%;margin:30px 50px 30px;background-color: rgb(9,19,55) ;font-family: Arial, Helvetica, sans-serif">
+	<div style="float: right; margin-top: -10px; margin-left: 1250px;position: fixed;">
+        <!-- <input type="image" src="../img/minbtn.png" width="20px" style="margin-right: 5px">
+        <input type="image" src="../img/xbtn.png" height="20px"> -->
+        <img src="../img/minbtn.png" alt="" height="20px" style="margin-right: 5px; cursor: pointer" id="min-btn">
+        <img src="../img/xbtn.png" alt="" height="20px" style="cursor: pointer" id="close-btn">
+        <script>
+            const remote = require('electron').remote;
+            document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize(); 
+            });
+            
+            document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+            }); 
+        </script>
+    </div>
+	<div class="container-fluid">
+		<!-- SCORE -->
+		<div style="position: fixed; top:75px; right:54px;">
+			<h5 style="font-weight: bolder; color: white">SCORE</h5>
+		</div>
+		<div style="position: fixed; top:100px; right:50px; height: 100px; width: 80px; background: rgb(44, 126, 182); border-radius: 10px; ">
+			<div class="row">
+				<div class="col text-center"><h4 style="font-weight: bolder; color: white" id="score">-</h4></div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><hr></div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><h4 style="font-weight: bolder; color: white">30</h4></div>
+			</div>
+		</div>
+		<!-- HEADER -->
+		<div class="row">
+			<div class="col text-center" style="margin-bottom: 100px" id="header">
+				<h1 style="color: rgb(255,197,0); font-weight: bolder; font-size: 50px">Assessment Card <a href="#" title="Instructions" data-toggle="popover" data-placement="bottom" data-content="Find the solution of each of the following equations by completing the square. <br/> NOTE: SOLVE FOR POSITIVE SOLUTION FIRST" data-html="true" style="text-decoration: none;">ⓘ</a></h1>
+			</div>
+		</div>
+		<!-- BODY -->
+		<div class="row">
+			<div class="carousel slide col" data-ride="carousel" id="demo" data-interval="false" data-wrap="false" style="height: 425px;">
+				<div class="carousel-inner text-center" style="color: rgb(239, 230,255); font-size:1.7em">
+					<div class="carousel-item active">
+						<!-- GIVEN 0 -->
+						<div style="display: inherit;" id="given0">
+							<h1><b>x<sup>2</sup> - 14x = 32</b></h1> <!-- start of number 1 -->
+							<h3>a<sup>2</sup> = <input type="text" id="input0-0" class="form-control form-control-sm text-center" ></h3>
+							<h3>x<sup>2</sup> - <input type="text" id="input0-1" class="form-control form-control-sm text-center" >x + <input type="text" id="input0-2" class="form-control form-control-sm text-center" > = <input type="text" id="input0-3" class="form-control form-control-sm text-center" ></h3>
+							<h3><span>&#8730</span><span class="squareroot">(x - <input type="text" id="input0-4" class="form-control form-control-sm text-center" >)\(^2\)</span> = <span>&#8730</span><span class="squareroot"><input type="text" id="input0-5" class="form-control form-control-sm text-center" ></span></h3>
+							<h3>x - <input type="text" id="input0-6" class="form-control form-control-sm text-center" > = \(\pm\)<input type="text" id="input0-7" class="form-control form-control-sm text-center" ></h3>
 
-				<div>
-					&nbsp &nbsp <b>B.</b> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x\(^2\) - 14x + 49 = 81 <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <span>&#8730</span><span class="squareroot">(x - 7)\(^2\)</span> = <span>&#8730</span><span class="squareroot">81</span> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x - 7 = <span>&#177</span> 9 <br>
-				</div>
+							<h1>x<sub>1</sub> = <input type="text" id="input0-8" class="form-control form-control-sm text-center" ></h1>
+							<h1>x<sub>2</sub> = <input type="text" id="input0-9" class="form-control form-control-sm text-center" ></h1>
+						</div><!-- end of number 1 -->
+					</div>
+					<div class="carousel-item">
+						<!-- GIVEN 1 -->
+						<div style="display: inherit;" id="given1">
+							<h1><b>t<sup>2</sup> + 10t + 9 = 0</b></h1> <!-- start of number 2 -->
+							<h3>a<sup>2</sup> = <input type="text" id="input1-0" class="form-control form-control-sm text-center" ></h3>
+							<h3>t<sup>2</sup> + <input type="text" id="input1-1" class="form-control form-control-sm text-center" >t + <input type="text" id="input1-2" class="form-control form-control-sm text-center" > = <input type="text" id="input1-3" class="form-control form-control-sm text-center" ></h3>
+							<h3><span>&#8730</span><span class="squareroot">(t + <input type="text" id="input1-4" class="form-control form-control-sm text-center" >)\(^2\)</span> = <span>&#8730</span><span class="squareroot"><input type="text" id="input1-5" class="form-control form-control-sm text-center" ></span></h3>
+							<h3>t + <input type="text" id="input1-6" class="form-control form-control-sm text-center" > = \(\pm\)<input type="text" id="input1-7" class="form-control form-control-sm text-center" ></h3>
 
-				<div>
-					&nbsp &nbsp <b>C.</b> &nbsp first solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x - 7 = 9<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x = 7 + 9<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>x = 16</b><br>
-				</div>
+							<h1>t<sub>1</sub> = <input type="text" id="input1-8" class="form-control form-control-sm text-center" ></h1>
+							<h1>t<sub>2</sub> = <input type="text" id="input1-9" class="form-control form-control-sm text-center" ></h1>
+						</div><!-- end of number 2 -->
+					</div>
+					<div class="carousel-item">
+						<!-- GIVEN 2 -->
+						<div style="display:inherit;" id="given2">
+							<h1><b>x<sup>2</sup> - 2x = 3</b></h1> <!-- start of number 3 -->
+							<h3>a<sup>2</sup> = <input type="text" id="input2-0" class="form-control form-control-sm text-center" ></h3>
+							<h3>x<sup>2</sup> - <input type="text" id="input2-1" class="form-control form-control-sm text-center" >x + <input type="text" id="input2-2" class="form-control form-control-sm text-center" > = <input type="text" id="input2-3" class="form-control form-control-sm text-center" ></h3>
+							<h3><span>&#8730</span><span class="squareroot">(x - <input type="text" id="input2-4" class="form-control form-control-sm text-center" >)\(^2\)</span> = <span>&#8730</span><span class="squareroot"><input type="text" id="input2-5" class="form-control form-control-sm text-center" ></span></h3>
+							<h3>x - <input type="text" id="input2-6" class="form-control form-control-sm text-center" > = \(\pm\)<input type="text" id="input2-7" class="form-control form-control-sm text-center" ></h3>
 
-				<div>
-					&nbsp &nbsp <b>D.</b> &nbsp second solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x - 7 = - 9<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x = - 9 + 7<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>x = - 2</b><br>
+							<h1>x<sub>1</sub> = <input type="text" id="input2-8" class="form-control form-control-sm text-center" ></h1>
+							<h1>x<sub>2</sub> = <input type="text" id="input2-9" class="form-control form-control-sm text-center" ></h1>
+						</div><!-- end of number 3 -->
+					</div>
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
 				</div>
-		</div><!-- end of number 1 -->
+			</div>
+		</div>
+		<!-- BACK BUTTON -->
+		<div class="row" style="position: fixed; bottom: 25px; right: 25px">
+            <div class="col-12 text-center" style="margin-top: 0px;"><button class="btn" style="padding:15px;background-color:rgb(255,197,0); border-radius: 60px" onclick="location.href='menu.html'"><img src="../img/back.png" height="30px"></button></div>
+		</div>
+		<!-- SUBMIT BUTTONS -->
+		<div class="row">
+			<div class="col-12 text-center">
+				<button id="checkAnswers" class="btn btn-lg btn-success" style="border-radius: 10px;" onclick="checkAnswers()">Submit Answers</button>
+				<!-- &nbsp -->
+				<!-- <button id="showSolutions" class="btn btn-lg btn-warning" style="border-radius: 10px; background: rgb(255, 193, 7)" disabled="true" onclick="showSolutions()">Show Solutions</button> -->
+			</div>
+		</div>
+	</div>
+	<script src="../vendor/popper.min.js"></script>
+    <script src="../vendor/jquery.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap.js"></script>
+    <script src="../assets/js/jquery.smoothState.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+	<script src="../js/mathjax.js"></script>
+	<script>
+		function checkAnswers(){
+			var score = 0
+			// creates array
+			correct = [
+				['49','14','49','81','7','81','7','9','16','-2'],
+				['25','10','25','16','5','16','5','4','-1','-9'],
+				['1','2','1','4','1','4','1','2','3','-1']
+			]
+//
+			//creates answers array
+			answers = new Array(3)
+			//creates second dimension of answers
+			for(var i = 0; i < 3; i++){
+				answers[i] = []
+				for(var j = 0; j < 10; j++)
+					answers[i].push(document.getElementById('input'+i+'-'+j).value)
+			}
 
-		<h3><li><b>) t\(^2\) + 10t + 9 = 0 </b></li></h3> <!-- start of number 2 -->
-		<div class="spacing">
-				&nbsp steps: <br>
-				<div>
-					&nbsp &nbsp <b>A.</b> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp a = 5<br> 
-					&nbsp &nbsp &nbsp &nbsp &nbsp a\(^2\) = 25<br>
-				</div>
+			console.log(answers)
+			for(var i = 0; i < 3; i++){
+				for(var j = 0; j < 10; j++){
+					if(correct[i][j] == answers[i][j]){
+						document.getElementById('input'+i+'-'+j).style.background = 'rgb(126,241, 136)'
+						score++
+					}
+					else{
+						document.getElementById('input'+i+'-'+j).style.background = 'rgb(255, 163, 163)'
+					}
+				}
+			}
+			document.getElementById('score').innerHTML = score;
+			$("input").addClass("disablecontent")
+//
+			document.getElementById('checkAnswers').disabled = true
+			//document.getElementById('showSolutions').disabled = false
 
-				<div>
-					&nbsp &nbsp <b>B.</b> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp t\(^2\) + 10t + 25 = 16<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  <span>&#8730</span><span class="squareroot">(t + 5)\(^2\)</span> = <span>&#8730</span><span class="squareroot">16</span><br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp t + 5 = <span>&#177</span> 4 <br>
-				</div>
+		}
 
-				<div>
-					&nbsp &nbsp <b>C.</b> &nbsp first solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  t + 5 = 4<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  t = 4 - 5 <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  <b>t = - 1</b><br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>D.</b> &nbsp second solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  t + 5 = - 4<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  t = - 5 - 4<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>t = -9</b><br>
-				</div>
-		</div><!-- end of number 2 -->
-
-		<h3><li><b>) x\(^2\) - 2x = 3 </b></li></h3> <!-- start of number 3 -->
-		<div class="spacing">
-				&nbsp steps: <br>
-				<div>
-					&nbsp &nbsp <b>A.</b>  <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp a = - 1<br> 
-					&nbsp &nbsp &nbsp &nbsp &nbsp a = 1<br> 
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>B.</b>  <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x\(^2\) - 2x + 1 = 4 <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <span>&#8730</span><span class="squareroot">(x -1)\(^2\)</span> = <span>&#8730</span><span class="squareroot">4</span><br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x - 1 = <span>&#177</span> 2<br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>C.</b> &nbsp first solution:<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x - 1 = 2<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x = 2 + 1<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>x = 3</b><br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>D.</b> &nbsp second solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x - 1 = - 2<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp x = - 2 + 1<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>x = - 1</b><br>
-				</div>
-		</div><!-- end of number 3 -->
-		</ol>
-	</section>
-	<footer>
-		
-	</footer>
+		function showSolutions(){
+			if(document.getElementById('given0').style.display === "none"){
+				for(var i = 0; i < 5; i++){
+					document.getElementById('given'+i).style.display = 'inherit'
+					document.getElementById('solution'+i).style.display = 'none'
+					document.getElementById('showSolutions').innerHTML = "Show Solutions"
+					document.getElementById('showSolutions').style.background = "rgb(255, 193, 7)"
+					document.getElementById('header').style.marginBottom = '100px'
+					document.getElementById('demo').style.height = '425px'
+				}
+			}
+			else{
+				for(var i = 0; i < 5; i++){
+					document.getElementById('given'+i).style.display = 'none'
+					document.getElementById('solution'+i).style.display = 'inherit'
+					document.getElementById('showSolutions').innerHTML = "Go Back"
+					document.getElementById('showSolutions').style.background = "rgb(255, 65, 7)"
+					document.getElementById('header').style.marginBottom = '25px'
+					document.getElementById('demo').style.height = '500px'
+				}
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function(){
+		  $('[data-toggle="popover"]').popover();   
+		});
+	</script>
 </body>
 </html>

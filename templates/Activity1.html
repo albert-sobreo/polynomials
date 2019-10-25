@@ -38,6 +38,7 @@
         </script>
     </div>
 	<div class="container-fluid">
+		<!-- SCORE -->
 		<div style="position: fixed; top:75px; right:54px;">
 			<h5 style="font-weight: bolder; color: white">SCORE</h5>
 		</div>
@@ -52,11 +53,13 @@
 				<div class="col text-center"><h4 style="font-weight: bolder; color: white">5</h4></div>
 			</div>
 		</div>
+		<!-- HEADER -->
 		<div class="row">
 			<div class="col text-center" style="margin-bottom: 100px;">
-				<h1 style="color: rgb(255,197,0); font-weight: bolder; font-size: 50px">Activity 1</h1>
+				<h1 style="color: rgb(255,197,0); font-weight: bolder; font-size: 50px">Activity 1 <a href="#" title="Instructions" data-toggle="popover" data-placement="bottom" data-content="What must be added to the following binomials to make them perfect square trinomials?" style="text-decoration: none;">ⓘ</a> </h1>
 			</div>
 		</div>
+		<!-- BODY -->
 		<div class="row">
 			<div class="carousel slide col" data-ride="carousel" id="demo" data-interval="false" data-wrap="false" style="height: 425px;">
 				<div class="carousel-inner text-center" style="color:rgb(239, 230, 255); font-size:1.7em;">
@@ -68,12 +71,12 @@
 							<div style="margin: 0 300px 0; background: rgb(56, 85, 97); border-radius: 20px; height: 400px">
 									<b style="color: rgb(255,197,0)">1.) x<sup>2</sup> - 10x + ____ </b><br>
 									<b>a. find the value of a </b> <br>
-									\(a={10\over2}\)<br>
-									\(a=5\) <br>
+									\(a=-{10\over2}\)<br>
+									\(a=-5\) <br>
 									where a is from \(x^2+2ax+a^2\) <br>
 
 									<b>b. solve for a<sup>2</sup></b> <br>
-									\(a^2\) = \(5^2\)<br>
+									\(a^2\) = \((-5)^2\)<br>
 									<b>\(a^2 = 25\)</b>
 							</div>
 						</div>
@@ -88,7 +91,7 @@
 									<b>a. find the value of a</b><br>
 									\(a={6\over2}\) <br>
 									\(a=3\) <br>
-									<b>b. solve for \(a^2\)</b> <br>
+									<b>b. solve for a<sup>2</sup></b> <br>
 									\(a^2=3^2\)<br>
 									<b>\(a^2 = 9\)</b>
 							</div>
@@ -105,7 +108,7 @@
 								\(a=-{12\over2}\) <br>
 								\(a=-6\) <br>
 
-								<b>b. solve for \(a^2\) </b> <br>
+								<b>b. solve for a<sup>2</sup></b> <br>
 								\(a^2=(-6)^2\)<br>
 								<b>\(a^2=36\)</b>
 							</div>
@@ -121,7 +124,7 @@
 								<b>a. find the value of a </b><br>
 								\(a={7\over2}\) <br>
 
-								<b>b. solve for \(a^2\) </b><br>
+								<b>b. solve for a<sup>2</sup></b><br>
 								\(a^2=({7\over2})^2\)<br>
 								<b> \(a^2 ={49\over4}\) </b>
 							</div>
@@ -138,7 +141,7 @@
 								\(a={30\over2}\) <br>
 								\(a=15\) <br>
 
-								<b>b. solve for a\(^2\)</b> <br>
+								<b>b. solve for a<sup>2</sup></b> <br>
 								\(a^2=15^2\)<br>
 								<b>\(a^2=225\)</b>
 							</div>
@@ -153,9 +156,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- BACK BUTTON -->
 		<div class="row" style="position: fixed; bottom: 25px; right: 25px">
             <div class="col-12 text-center" style="margin-top: 0px;"><button class="btn" style="padding:15px;background-color:rgb(255,197,0); border-radius: 60px" onclick="location.href='activitycard.html'"><img src="../img/back.png" height="30px"></button></div>
 		</div>
+		<!-- SUBMIT BUTTONS -->
 		<div class="row">
 			<div class="col-12 text-center">
 				<button id="checkAnswers" class="btn btn-lg btn-success" style="border-radius: 10px;" onclick="checkAnswers()">Submit Answers</button>
@@ -164,7 +169,8 @@
 			</div>
 		</div>
 	</div class="container">
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="../vendor/popper.min.js"></script>
+    <script src="../vendor/jquery.js"></script>
     <script type="text/javascript" src="../vendor/bootstrap.js"></script>
     <script src="../assets/js/jquery.smoothState.min.js"></script>
     <script src="../assets/js/main.js"></script>
@@ -172,10 +178,6 @@
 
 	<script>
 		function checkAnswers(){
-			var r = confirm("Are you sure you want to submit all answers?")
-			if(!r){
-				return
-			}
 			var score = 0
 			answers = []
 			correct = ['25', '9', '36', '49/4', '225']
@@ -221,6 +223,11 @@
 				}
 			}
 		}
+	</script>
+	<script>
+		$(document).ready(function(){
+		  $('[data-toggle="popover"]').popover();   
+		});
 	</script>
 
 </body>

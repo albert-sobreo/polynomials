@@ -33,3 +33,17 @@ b{
 .disablecontent{
 	pointer-events: none;
 }
+
+div::-webkit-scrollbar {
+	background: #fff;
+	width: 10px;
+	margin-right: 100px;
+}
+
+div::-webkit-scrollbar-thumb {
+	background: rgb(255,197,0);
+}
+
+sup, sub{
+	font-size: .5em;
+}

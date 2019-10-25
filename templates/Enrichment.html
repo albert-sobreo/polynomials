@@ -1,82 +1,243 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ENRICHMENT</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/mathjax.js"></script>
+	<script> 
+		window.nodeRequire = require; 
+		delete window.require;
+		delete window.exports; delete window.module; 
+	</script> 
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../vendor/bootstrap.css">
+    <link rel="stylesheet" href="../css/style2.css">
+	<style type="text/css">
+		.spacing{
+			overflow-y: scroll;
+			height: 475px;
+		}
+    </style>
 </head>
-<body>
-	<header>
-		<h1><b>ENRICHMENT</b></h1>
-	</header>
-	<section>
-		<ol>
-		<h3><li><b>) w\(^2\) + 10w = 11 </b></li></h3> <!-- start of number 1 -->
-		<div class="spacing">
-				&nbsp steps: <br>
-				<div>
-					&nbsp &nbsp <b>A.</b>  <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp a = 5<br> 
-					&nbsp &nbsp &nbsp &nbsp &nbsp a\(^2\) = 25 <br>
+<body style="background: url(../img/guidebg.png); background-repeat: no-repeat; background-size: 150%;margin:30px 50px 30px;background-color: rgb(9,19,55) ;font-family: Arial, Helvetica, sans-serif">
+	<div style="float: right; margin-top: -10px; margin-left: 1250px;position: fixed;">
+        <!-- <input type="image" src="../img/minbtn.png" width="20px" style="margin-right: 5px">
+        <input type="image" src="../img/xbtn.png" height="20px"> -->
+        <img src="../img/minbtn.png" alt="" height="20px" style="margin-right: 5px; cursor: pointer" id="min-btn">
+        <img src="../img/xbtn.png" alt="" height="20px" style="cursor: pointer" id="close-btn">
+        <script>
+            const remote = require('electron').remote;
+            document.getElementById("min-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.minimize(); 
+            });
+            
+            document.getElementById("close-btn").addEventListener("click", function (e) {
+                var window = remote.getCurrentWindow();
+                window.close();
+            }); 
+        </script>
+    </div>
+	<div class="container-fluid">
+		<!-- SCORE -->
+		<div style="position: fixed; top:75px; right:54px;">
+			<h5 style="font-weight: bolder; color: white">SCORE</h5>
+		</div>
+		<div style="position: fixed; top:100px; right:50px; height: 100px; width: 80px; background: rgb(44, 126, 182); border-radius: 10px; ">
+			<div class="row">
+				<div class="col text-center"><h4 style="font-weight: bolder; color: white" id="score">-</h4></div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><hr></div>
+			</div>
+			<div class="row">
+				<div class="col text-center"><h4 style="font-weight: bolder; color: white">4</h4></div>
+			</div>
+		</div>
+		<!-- HEADER -->
+		<div class="row">
+			<div class="col text-center" style="margin-bottom: 100px" id="header">
+				<h1 style="color: rgb(255,197,0); font-weight: bolder; font-size: 50px">Enrichment Card <a href="#" title="Instructions" data-toggle="popover" data-placement="bottom" data-content="Solve each quadratic equation by completing the square. <br/> NOTE: SOLVE FOR POSITIVE SOLUTION FIRST" data-html="true" style="text-decoration: none;">ⓘ</a></h1>
+			</div>
+		</div>
+		<!-- BODY -->
+		<div class="row">
+			<div class="carousel slide col" data-ride="carousel" id="demo" data-interval="false" data-wrap="false" style="height: 425px;">
+				<div class="carousel-inner text-center" style="color: rgb(239, 230,255); font-size:1.7em">
+					<div class="carousel-item active">
+						<!-- GIVEN 0 -->
+						<div style="display: inherit;" id="given0">
+							<h1><b>w<sup>2</sup> + 10w = 11</b></h1> <!-- start of number 1 -->
+							<h1>w<sub>1</sub> = <input type="text" id="input0-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>w<sub>2</sub> = <input type="text" id="input0-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+						</div>
+						<div class="spacing" id="solution0" style="display: none;margin: 0 200px 0; background: rgb(56, 85, 97); border-radius: 20px; ">
+							<div>
+								<b style="color: rgb(255,197,0)">1.) w<sup>2</sup> + 10w = 11</b><br>
+								<b>a. Add the square of one-half of the <br>
+								coefficient of x on both sides of the  <br>
+								equation.</b><br>
+								<!-- SOLUTION -->
+								\(a={10\over2}\) <br>
+								\(a=5\) <br>
+								\(a^2=5^2\) <br>
+								\(a^2=25\) <br>
+							</div>
+							<div>
+								<b>b. therefore:</b><br>
+								<!-- SOLUTION -->
+								\(w^2+10w+25=36\) <br>
+								<span>&#8730</span><span class="squareroot">(w+5)\(^2\)</span> = <span>&#8730</span><span class="squareroot">36</span> <br>
+								\(w+5=\pm36\)
+							</div>
+							<div>
+								<b>c. first solution:</b><br>
+								<!-- SOLUTION -->
+								\(w+5=6\) <br>
+								\(w=6-5\) <br>
+								\(w=1\) <br>
+							</div>
+							<div>
+								<b>d. second solution:</b><br>
+								<!-- SOLUTION -->
+								\(w+5=-6\) <br>
+								\(w=-6-5\) <br>
+								\(w=-11\) <br> 	
+							</div>
+						</div><!-- end of number 1 -->
+					</div>
+					<div class="carousel-item">
+						<!-- GIVEN 1 -->
+						<div style="display: inherit;" id="given1">
+							<h1><b>g<sup>2</sup> + 7g - \({51\over4}\) = 0</b></h1> <!-- start of number 2 -->
+							<h1>x<sub>1</sub> = <input type="text" id="input1-0" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+							<h1>x<sub>2</sub> = <input type="text" id="input1-1" class="form-control text-center" style="width: 100px; display: inline; font-size: .9em;"></h1>
+						</div>
+						<div class="spacing" id="solution1" style="display: none;margin: 0 200px 0; background: rgb(56, 85, 97); border-radius: 20px; ">
+							<div>
+								<b style="color: rgb(255,197,0)">2.) g<sup>2</sup> + 7g - \({51\over4}\) = 0</b><br>
+								<b>a. Add the square of one-half of the <br>
+								coefficient of x on both sides of the  <br>
+								equation.</b><br>
+								<!-- SOLUTION -->
+								\(a={7\over2}\) <br>
+								\(a^2=({7\over2})^2\) <br>
+								\(a^2={49\over4}\) <br>
+							</div>
+							<div>
+								<b>b. therefore:</b><br>
+								<!-- SOLUTION -->
+								\(g^2+7g+{49\over4}={100\over4}\) <br>
+								\(\sqrt{(g+{7\over2})^2}=\sqrt{{100\over4}}\) <br>
+								\(g+{7\over2}=\pm{10\over2}\) <br>
+							</div>
+							<div>
+								<b>c. first solution:</b><br>
+								<!-- SOLUTION -->
+								\(g+{7\over2}={10\over2}\) <br>
+								\(g={10\over2}-{7\over2}\) <br>
+								\(g={3\over2}\) <br>
+							</div>
+							<div>
+								<b>d. second solution:</b><br>
+								<!-- SOLUTION -->
+								\(g+{7\over2}=-{10\over2}\) <br>
+								\(g=-{10\over2}-{7\over2}\) <br>
+								\(g=-{17\over2}\) <br>
+							</div>
+						</div><!-- end of number 2 -->
+					</div>
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
 				</div>
+			</div>
+		</div>
+		<!-- BACK BUTTON -->
+		<div class="row" style="position: fixed; bottom: 25px; right: 25px">
+            <div class="col-12 text-center" style="margin-top: 0px;"><button class="btn" style="padding:15px;background-color:rgb(255,197,0); border-radius: 60px" onclick="location.href='menu.html'"><img src="../img/back.png" height="30px"></button></div>
+		</div>
+		<!-- SUBMIT BUTTONS -->
+		<div class="row">
+			<div class="col-12 text-center">
+				<button id="checkAnswers" class="btn btn-lg btn-success" style="border-radius: 10px;" onclick="checkAnswers()">Submit Answers</button>
+				&nbsp
+				<button id="showSolutions" class="btn btn-lg btn-warning" style="border-radius: 10px; background: rgb(255, 193, 7)" disabled="true" onclick="showSolutions()">Show Solutions</button>
+			</div>
+		</div>
+	</div>
+	<script src="../vendor/popper.min.js"></script>
+    <script src="../vendor/jquery.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap.js"></script>
+    <script src="../assets/js/jquery.smoothState.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+	<script src="../js/mathjax.js"></script>
+	<script>
+		function checkAnswers(){
+			var score = 0
+			// creates array
+			correct = [
+				['1', '-11'],
+				['3/2', '-17/2']
+			]
+			//creates answers array
+			answers = new Array(2)
+			//creates second dimension of answers
+			for(var i = 0; i < 2; i++){
+				answers[i] = []
+				answers[i].push(document.getElementById('input'+i+'-0').value)
+				answers[i].push(document.getElementById('input'+i+'-1').value)
+			}
+//
+			for(var i = 0; i < 2; i++){
+				for(var j = 0; j < 2; j++){
+					if(correct[i][j] == answers[i][j]){
+						document.getElementById('input'+i+'-'+j).style.background = 'rgb(126,241, 136)'
+						score++
+					}
+					else{
+						document.getElementById('input'+i+'-'+j).style.background = 'rgb(255, 163, 163)'
+					}
+				}
+			}
+			document.getElementById('score').innerHTML = score;
+			$("input").addClass("disablecontent")
+//
+			document.getElementById('checkAnswers').disabled = true
+			document.getElementById('showSolutions').disabled = false
 
-				<div>
-					&nbsp &nbsp <b>B.</b> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp w\(^2\) + 10w + 25 = 36<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <span>&#8730</span><span class="squareroot">(w + 5)\(^2\)</span> = <span>&#8730</span><span class="squareroot">36</span><br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp w + 5 = <span>&#177</span>6<br>
-				</div>
+		}
 
-				<div>
-					&nbsp &nbsp <b>C.</b> &nbsp first solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp w + 5 = 6<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp w = 6 - 5<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>w = 1</b><br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>D.</b> &nbsp second solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp w + 5 = - 6<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp w = - 6 - 5<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>w = - 11</b><br>
-				</div>
-		</div><!-- end of number 1 -->
-
-		<h3><li><b>) \(g^2 + 7g - {51\over4} = 0\) </b></li></h3> <!-- start of number 2 -->
-		<div class="spacing">
-				&nbsp steps: <br>
-				<div>
-					&nbsp &nbsp <b>A.</b> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp \(a = {7\over2}\)<br> 
-					&nbsp &nbsp &nbsp &nbsp &nbsp \(a^2 = {49\over4}\)<br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>B.</b> <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp \(g^2 + 7g - {49\over4} = {100\over4}\)<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <span>&#8730</span><span class="squareroot">\((g + {7\over2})^2\)</span> = <span>&#8730</span><span class="squareroot">\({100\over4}\)</span><br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>C.</b> &nbsp first solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp \(g + {7\over2} = {10\over2}\) <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp \(g = {10\over2} - {7\over2}\) <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp <b>\(g = {3\over2}\)</b> <br>
-				</div>
-
-				<div>
-					&nbsp &nbsp <b>D.</b> &nbsp second solution: <br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  \(g + {7\over2} = -{10\over2}\)<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  \(g = -{10\over2} - {7\over2}\)<br>
-					&nbsp &nbsp &nbsp &nbsp &nbsp  <b>\(g = - {17\over2}\)</b><br>
-				</div>
-		</div><!-- end of number 2 -->
-
-		</ol>
-	</section>
-	<footer>
-		
-	</footer>
+		function showSolutions(){
+			if(document.getElementById('given0').style.display === "none"){
+				for(var i = 0; i < 5; i++){
+					document.getElementById('given'+i).style.display = 'inherit'
+					document.getElementById('solution'+i).style.display = 'none'
+					document.getElementById('showSolutions').innerHTML = "Show Solutions"
+					document.getElementById('showSolutions').style.background = "rgb(255, 193, 7)"
+					document.getElementById('header').style.marginBottom = '100px'
+					document.getElementById('demo').style.height = '425px'
+				}
+			}
+			else{
+				for(var i = 0; i < 5; i++){
+					document.getElementById('given'+i).style.display = 'none'
+					document.getElementById('solution'+i).style.display = 'inherit'
+					document.getElementById('showSolutions').innerHTML = "Go Back"
+					document.getElementById('showSolutions').style.background = "rgb(255, 65, 7)"
+					document.getElementById('header').style.marginBottom = '25px'
+					document.getElementById('demo').style.height = '500px'
+				}
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function(){
+		  $('[data-toggle="popover"]').popover();   
+		});
+	</script>
 </body>
 </html>

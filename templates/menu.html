@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script> 
+		window.nodeRequire = require; 
+		delete window.exports; delete window.module; 
+	</script> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,6 +18,9 @@
     </style>
 </head>
 <body style="background: url(../img/menu-bg-copy.png); background-repeat: no-repeat; background-size: cover;margin:30px 50px 30px;background-color: rgb(9,16,19) ;font-family: Arial, Helvetica, sans-serif">
+    <div style="float: left; top: 10px; left: 20px; position: fixed;">
+            <h4 style="color:rgb(202, 219, 235); font-weight: bold">Welcome, <span id="username"></span></h4>
+    </div>
     <div style="float: right; margin-top: -10px; margin-left: 1250px;position: fixed;">
         <!-- <input type="image" src="../img/minbtn.png" width="20px" style="margin-right: 5px">
         <input type="image" src="../img/xbtn.png" height="20px"> -->
@@ -34,24 +41,24 @@
     </div>
     <div class="container-fluid boi">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 text-center">
                 <div class="card-selector guide-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='guidecard.html'"><span class="guide-card-helper"></span><p>Guide Card</p></div>
             </div>
-            <div class="col-4">
+            <div class="col-4 text-center">
                 <div class="card-selector activity-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='activitycard.html'"><span class="activity-card-helper"></span><p>Activity Card</p></div>
             </div>
-            <div class="col-4">
-                <div class="card-selector assessment-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='Assessment.html'"><span class="assessment-card-helper"></span><p>Assessment Card</p></div>
+            <div class="col-4 text-center" id="assessment">
+                <div class="card-selector assessment-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='Assessment.html'"><span class="assessment-card-helper"></span><p id="assessment_score">Assessment Card</p></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
-                <div class="card-selector enrichment-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='Enrichment.html'"><span class="enrichment-card-helper"></span><p>Enrichment Card</p></div>
+            <div class="col-4 text-center" id="enrichment">
+                <div class="card-selector enrichment-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='Enrichment.html'"><span class="enrichment-card-helper"></span><p id="enrichment_score">Enrichment Card</p></div>
             </div>
-            <div class="col-4">
+            <div class="col-4 text-center">
                 <div class="card-selector reference-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='referencecard.html'"><span class="reference-card-helper"></span><p>Reference Card</p></div>
             </div>
-            <div class="col-4">
+            <div class="col-4 text-center">
                 <div class="card-selector credit-card" style="height:300px; box-shadow: 0 0 50px rgba(0,0,0,0.5)" onclick="location.href='credit.html'"><span class="credit-card-helper"></span><p>Credits</p></div>
             </div>
         </div>
@@ -60,5 +67,16 @@
     <script type="text/javascript" src="../vendor/bootstrap.js"></script>
     <script src="../assets/js/jquery.smoothState.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('username').innerHTML = sessionStorage.username;
+        if(sessionStorage.assessment_score != undefined){
+            document.getElementById('assessment_score').innerHTML = "Assessment Card <br> Score: " + sessionStorage.assessment_score
+            $('#assessment').addClass('disablecontent')
+        }
+        if(sessionStorage.enrichment_score != undefined){
+            document.getElementById('enrichment_score').innerHTML = "Enrichment Card <br> Score: " + sessionStorage.enrichment_score
+            $('#enrichment').addClass('disablecontent')
+        }
+    </script>
 </body>
 </html>

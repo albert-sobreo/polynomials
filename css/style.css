@@ -416,3 +416,7 @@ li{
     background-size: cover;
     background-position: center;
 }
+
+.disablecontent{
+	pointer-events: none;
+}

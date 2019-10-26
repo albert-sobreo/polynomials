@@ -15,40 +15,6 @@
                 images[i].src = preload.arguments[i];
             }
         }
-
-        //-- usage --//
-        preload(
-            "img/1.png",
-            "img/1dot.png",
-            "img/2.png",
-            "img/2dot.png",
-            "img/3.png",
-            "img/3dot.png",
-            "img/act1.jpg",
-            "img/act2.png",
-            "img/act3.jpg",
-            "img/activitycard-copy.png",
-            "img/activitycard.png",
-            "img/back.png",
-            "img/cel.jpg",
-            "img/earth.png",
-            "img/eloy.jpg",
-            "img/guide1.jpg",
-            "img/guidebg.png",
-            "img/jhex.jpg",
-            "img/math1.jpg",
-            "img/math2.jpg",
-            "img/math3.png",
-            "img/me.jpg",
-            "img/menu-bg-copy.png",
-            "img/mig.jpg",
-            "img/minbtn.png",
-            "img/nor.jpg",
-            "img/people.jpg",
-            "img/people.png",
-            "img/venus.jpg",
-            "img/xbtn.png",
-        )
     </script>
     <style type="text/css">
         ::-webkit-scrollbar { 
@@ -77,9 +43,9 @@
             <div class="col-4 text-center">
                 <form action="./templates/menu.html">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Name" required>
+                        <input type="text" class="form-control" placeholder="Full Name" id="username" required>
                         <div class="input-group-append">
-                            <button class="btn btn-info" type="submit">Go</button>
+                            <button class="btn btn-info" type="submit" onclick="storeUsername()">Go</button>
                         </div>
                     </div>
                 </form>
@@ -87,9 +53,14 @@
             <div class="col-4"></div>
         </div>
     </div>
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="../vendor/jquery.js"></script>
 <script type="text/javascript" src="vendor/bootstrap.js"></script>
 <script type="text/javascript" defer src="js/kurzgesagt.js"></script>
 <script src="assets/js/jquery.smoothState.min.js"></script>
+<script>
+    function storeUsername(){
+        sessionStorage.username = document.getElementById('username').value
+    }
+</script>
 </body>
 </html>

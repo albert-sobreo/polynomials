@@ -14,6 +14,9 @@
     </style>
 </head>
 <body style="background: url(../img/guidebg.png); background-repeat: no-repeat; background-position:top; background-size: cover;margin:30px 50px 30px;background-color: rgb(29,41,47) ;font-family: Arial, Helvetica, sans-serif">
+    <div style="float: left; top: 10px; left: 20px; position: fixed;">
+            <h4 style="color:rgb(202, 219, 235); font-weight: bold">Welcome, <span id="username"></span></h4>
+    </div>
     <div style="float: right; margin-top: -10px; margin-left: 1250px;position: fixed;">
         <!-- <input type="image" src="../img/minbtn.png" width="20px" style="margin-right: 5px">
         <input type="image" src="../img/xbtn.png" height="20px"> -->
@@ -60,5 +63,8 @@
     <script type="text/javascript" src="../vendor/bootstrap.js"></script>
     <script src="../assets/js/jquery.smoothState.min.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('username').innerHTML = sessionStorage.username;
+    </script>
 </body>
 </html>

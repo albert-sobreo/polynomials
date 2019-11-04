@@ -417,6 +417,12 @@ li{
     background-position: center;
 }
 
+.aldrin{
+    background: url('../img/aldrin.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 .disablecontent{
 	pointer-events: none;
 }

@@ -71,11 +71,9 @@
         document.getElementById('username').innerHTML = sessionStorage.username;
         if(sessionStorage.assessment_score != undefined){
             document.getElementById('assessment_score').innerHTML = "Assessment Card <br> Score: " + sessionStorage.assessment_score
-            $('#assessment').addClass('disablecontent')
         }
         if(sessionStorage.enrichment_score != undefined){
             document.getElementById('enrichment_score').innerHTML = "Enrichment Card <br> Score: " + sessionStorage.enrichment_score
-            $('#enrichment').addClass('disablecontent')
         }
     </script>
 </body>
